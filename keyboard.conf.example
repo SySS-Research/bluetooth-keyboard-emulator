@@ -1,0 +1,16 @@
+[default]
+BluetoothAddress = 00:01:02:03:04:05
+DeviceName = SySS_Keyboard
+DeviceShortName = SySSKbd
+
+# device interface
+Interface = hci0
+
+# different Bluetooth chipsets require different spoofing methods for changing
+# the MAC address, e.g. CSR8510 requires bdaddr, or BCM20702A0 requires btmgmt
+# valid spoofing options are: none, bdddr, btmgmt
+SpoofingMethod = btmgmt
+
+[auto_connect]
+AutoConnect = false
+Target= 00:00:00:00:00:00
