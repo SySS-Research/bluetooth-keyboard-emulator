@@ -63,7 +63,7 @@ For stopping the keyboard emulation, you can simply kill the tmux session.
 sudo tmux kill-session -t kbdemu
 ```
 
-The following ![screenshot of a Bluetooth Keyboard Emulator tmux session](https://git.syss.intern/mdeeg/bluetooth-keyboard-emulator/src/branch/master/images/bluetooth_keyboard_emulator.png)
+The following ![screenshot of a Bluetooth Keyboard Emulator tmux session](https://github.com/SySS-Research/bluetooth-keyboard-emulator/blob/master/images/bluetooth_keyboard_emulator.png)
 illustrates the keyboard emulator usage.
 
 # Disclaimer
