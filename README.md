@@ -18,6 +18,7 @@ So far, the keyboard emulator has only been tested on Arch Linux systems.
 - BlueZ 5 utilities [bluez-utils](https://www.archlinux.org/packages/extra/x86_64/bluez-utils/)
 - Bluetooth adapter, e.g. Bluetooth dongle with supported chipset (so far only tested CSR8510 and BCM20702A0)
 - Python 3
+- [https://pypi.org/project/dbus-python/](https://pypi.org/project/dbus-python/)
 - [pynput](https://pypi.org/project/pynput/)
 
 
