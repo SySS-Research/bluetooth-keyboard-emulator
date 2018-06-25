@@ -58,7 +58,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 # sleep time after Bluetooth command line tools
-OS_CMD_SLEEP = 1
+OS_CMD_SLEEP = 1.5
 
 
 class BTKbdBluezProfile(dbus.service.Object):
@@ -211,14 +211,14 @@ class BTKbDevice():
             # power on Bluetooth device using btmgmt software tool
             p = subprocess.run(['btmgmt', '--index', self.interface, 'power',
                                'on'], stdout=subprocess.PIPE)
-            print(p.stdout)
+            # print(p.stdout)
             time.sleep(OS_CMD_SLEEP)
 
             # set device class
             print("[+] Set device class")
             p = subprocess.run(['btmgmt', '--index', self.interface, 'class',
                                '5', '64'], stdout=subprocess.PIPE)
-            print(p.stdout)
+            # print(p.stdout)
             time.sleep(OS_CMD_SLEEP)
 
             # set device name and short name
@@ -228,13 +228,13 @@ class BTKbDevice():
             p = subprocess.run(['btmgmt', '--index', self.interface, 'name',
                                self.device_name, self.device_short_name],
                                stdout=subprocess.PIPE)
-            print(p.stdout)
+            # print(p.stdout)
             time.sleep(OS_CMD_SLEEP)
 
             # set device to connectable
             p = subprocess.run(['btmgmt', '--index', self.interface,
                                'connectable', 'on'], stdout=subprocess.PIPE)
-            print(p.stdout)
+            # print(p.stdout)
 
             time.sleep(OS_CMD_SLEEP)
 
@@ -242,7 +242,7 @@ class BTKbDevice():
         print("[+] Turn on discoverable mode")
         p = subprocess.run(['bluetoothctl', 'discoverable', 'on'],
                            stdout=subprocess.PIPE)
-        print(p.stdout)
+        # print(p.stdout)
 
     def register_bluez_profile(self):
         """Setup and register BlueZ profile"""
